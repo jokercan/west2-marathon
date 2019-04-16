@@ -20,7 +20,7 @@ public class LeaderController {
 	public LinkedHashMap<String, Object> getSingleAvg(@RequestParam(value = "class_num") int classNum){
 		LinkedHashMap<String , Object> hashMap = new LinkedHashMap<>();
 		HashMap<String, Object> data = new HashMap<>();
-		data.put("sub_id" , classNum);
+		data.put("class_num" , classNum);
 		data.put("avg_score" , leaderMapper.getAllAvg(classNum));
 		hashMap.put("data" , data);
 		return hashMap;
